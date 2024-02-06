@@ -43,6 +43,7 @@ GROUP BY RegionDisplay;
 
 SELECT CountryDisplay, ROUND(AVG(Numeric), 2) AS avg_life_exp_birth
 FROM `life-expectancy`
+WHERE MetricObserved="Life expectancy at birth (years)"
 GROUP BY CountryDisplay
 ORDER BY ROUND(AVG(Numeric), 2) DESC;
 
